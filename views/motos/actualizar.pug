@@ -1,0 +1,27 @@
+extends 
+
+block content 
+    a(href="/motos") Volver 
+    br
+    br
+    h1 Editar Motos
+    br
+    br
+    form(action=`/motos/${motod.id}/actualizar`method='post')
+        label(for="id") ID: 
+        input#id(type="text" name='id' value=moto.id disabled='')
+        br
+        label(for="color") Color: 
+        input#color(type="text" name="color" value=moto.color)
+        br
+        label(for="modelo") Modelo: 
+        input#modelo(type="text" name='modelo' vaue=moto.modelo)
+        br
+        label(for="latitud") Latitud: 
+        input#latitud(type="text" name='latitud' value=moto.ubicacion[0])
+        br
+        label(for="longitud") Longitud: 
+        input#longitud(type="text" name="longitud" value=moto.ubicacion[1])  
+        br
+        br
+        input.btn(type="submit" value='OK')
